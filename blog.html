@@ -13,13 +13,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap" rel="stylesheet" />
     <!-- css styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            background-image: url("./bg.png");
+            background-size: cover;
+            background-position: left top;
+            font-family: "Zilla Slab", serif;
+        }
+    </style>
 </head>
 
 <body class="bg-light">
     <!--===== Blog Questions section  ===-->
-    <section class="container text-center my-5">
-        <h2 class="title">Blog Questions</h2>
+    <section class="container text-center my-2">
+        <h1 class="align-items-center"><img src="./logo.png" /></h1>
+        <h2 class="text-white">Blog Questions</h2>
         <div class="accordion w-75 mx-auto my-4" id="accordionExample">
             <!-- question 1  -->
             <div class="accordion-item shadow-sm text-start rounded-3 border-5 my-3">
@@ -34,10 +42,12 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body text-secondary">
                         <strong>Local Storage</strong> : The localStorage object stores data with no expiration date and
-                        its not deleted when the browser is closed. The Data is available for future session.<br>
+                        it does not delete the data when the browser is closed. The Data will be available for future
+                        session.<br>
                         <strong>Session Storage</strong> : The sessionStorage object stores data for only one session
                         and
-                        its deleted when the browser is closed. The Data is not available for future session.<br>
+                        it deletes the data when the browser is closed. The Data wont be available for future
+                        session.<br>
                     </div>
                 </div>
             </div>
@@ -56,7 +66,7 @@
                         <strong>Global Scope</strong> : Variables with global scope can be accessible from anywhere in
                         the code.<br>
                         <strong>Block Scope</strong> : Variables with block scope can only be accessible within that
-                        particular block of code it was declared.<br>
+                        particular block of code in which it was declared.<br>
                     </div>
                 </div>
             </div>
@@ -76,7 +86,7 @@
                         function is called, it is sent to a browser API.Based on the command received from the call
                         stack, the API starts its own single-threaded operation.The call stack keeps track of all the
                         operations in line to be executed. When tasks are completed form broswer API it is sent to event
-                        queries.The event loop constantly checks whether the call stack is empty. If it is empty, new
+                        queue.The event loop constantly checks whether the call stack is empty. If it is empty, new
                         functions are added from the event queue.
                     </div>
                 </div>
